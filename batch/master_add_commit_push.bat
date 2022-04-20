@@ -31,9 +31,9 @@ git.exe push https://github.com/lucaimbalzano/Imbaflix.git
         >nul ping -n 1 "" 
     )
     echo(:: Done
-    ECHO ############################################
-    ECHO Successfully Commited
-    ECHO %username% committed the message:  "%input%"
+    ECHO ::
+    ECHO :: Successfully Commited
+    ECHO :: %username% committed the message:  "%input%"
     goto :eof
 
 :loadingScreen percent
@@ -44,14 +44,14 @@ git.exe push https://github.com/lucaimbalzano/Imbaflix.git
     set "fill=^##################################^"
     set /a "chars=2+%~1/10"
     set "spaces=!fill:~%chars%!"
-    set "loadBar=!fill:~7,%chars%!!spaces:#= !"
+    set "loadBar=!fill:~5,%chars%!!spaces:#= !"
 
     rem Time to paint
     (   cls
         echo(:: computer is computing .... %TIME%
         echo(::
         echo(::     %loadBar%                     
-        echo(::     # Pushing your changes #
+        echo(::     # Pushing your changes#
         echo(::     %loadBar%
     ) 
    
