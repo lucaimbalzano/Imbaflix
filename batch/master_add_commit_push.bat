@@ -45,11 +45,11 @@ git.exe push https://github.com/lucaimbalzano/Imbaflix.git
 
     rem Time to paint
     (   cls
-        echo(:: computer is computing .... %ss%
+        echo(:: computer is computing .... %TIME%
         echo(::
         echo(::                          
         echo(::     Pushing your changes:  %loadBar%
-        echo(::
+        ECHO::
     ) 
     goto :eof
 
