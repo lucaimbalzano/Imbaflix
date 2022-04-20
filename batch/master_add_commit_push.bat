@@ -49,8 +49,9 @@ git.exe push https://github.com/lucaimbalzano/Imbaflix.git
         echo(::
         echo(::                          
         echo(::     Pushing your changes:  %loadBar%
-        ECHO::
+       
     ) 
+    ECHO ::
     goto :eof
 
 ECHO ############################################
