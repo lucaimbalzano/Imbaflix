@@ -56,10 +56,11 @@ git.exe push https://github.com/lucaimbalzano/Imbaflix.git
         echo(::                          
         echo(::     Pushing your changes
         echo(::     %loadBar%
-        echo(::     %loadBar2%
-        echo(::     %loadBar3%
-        echo(::     %loadBar4%
+        echo(::     
     ) 
+    %loadBar2%
+        echo::     %loadBar3%
+        echo::     %loadBar4%
     ECHO ::
     goto :eof
 
