@@ -26,7 +26,7 @@ git.exe push https://github.com/lucaimbalzano/Imbaflix.git
 
    setlocal enableextensions enabledelayedexpansion
 
-    for /l %%a in (0 10 50) do (
+    for /l %%a in (0 20 200) do (
         call :loadingScreen %%a
         >nul ping -n 2 "" 
     )
