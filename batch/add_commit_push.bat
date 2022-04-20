@@ -2,6 +2,8 @@
 
 SET comment=Saved on %date%-%time%
 
+cd ..
+
 IF "%~1"=="" GOTO COMMIT
 SET username=%1
 SET comment=%comment% by %username%
