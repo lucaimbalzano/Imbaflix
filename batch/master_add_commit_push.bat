@@ -1,5 +1,5 @@
 @echo off
-ECHO AUTO COMMIT
+ECHO ############# AUTO COMMIT #############
 
 :inputCommand
 ECHO Enter commit message or X to exit..
@@ -22,9 +22,9 @@ IF "%input%" == "" (
 :commit
 git.exe add .
 git.exe commit -m "%input%"
-git.exe push
+git.exe push https://github.com/lucaimbalzano/Imbaflix.git
 ECHO Successfully Commited
-ECHO $USERNAME committed "%input%"
+ECHO %username% committed the message:"%input%"
 
 :exit
 PAUSE
