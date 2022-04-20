@@ -28,7 +28,7 @@ git.exe push https://github.com/lucaimbalzano/Imbaflix.git
 
     for /l %%a in (0 20 200) do (
         call :loadingScreen %%a
-        >nul ping -n 2 "" 
+        >nul ping -n 1 "" 
     )
     echo(:: Done
     ECHO ############################################
