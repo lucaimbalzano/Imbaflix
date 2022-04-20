@@ -1,30 +1,5 @@
 @echo off
-ECHO ############# AUTO COMMIT #############
-
-:inputCommand
-ECHO Enter commit message or X to exit..
-SET /p input=""
-GOTO check
-  
-
-:check
-IF "%input%" == "" (
-	ECHO Input is empty
-	GOTO inputCommand 
-) ELSE (
-   IF "%input%" == "X" (
-       exit
-   ) ELSE (
-     GOTO commit
-   )
-)
-
-:commit
-git.exe add .
-git.exe commit -m "%input%"
-git.exe push https://github.com/lucaimbalzano/Imbaflix.git
-
-   setlocal enableextensions enabledelayedexpansion
+    setlocal enableextensions enabledelayedexpansion
 
     for /l %%a in (0 10 100) do (
         call :loadingScreen %%a
@@ -46,7 +21,7 @@ git.exe push https://github.com/lucaimbalzano/Imbaflix.git
 
     rem Time to paint
     (   cls
-        echo(:: computer  is computing .... %time%
+        echo(:: computers were created to give humans time to think while waiting .... %time%
         echo(
         echo(                           %sb%
         echo(     Loading something big %loadBar%
@@ -54,10 +29,3 @@ git.exe push https://github.com/lucaimbalzano/Imbaflix.git
         echo(
     ) 
     goto :eof
-
-ECHO ############################################
-ECHO Successfully Commited
-ECHO %username% committed the message:  "%input%"
-
-:exit
-PAUSE
