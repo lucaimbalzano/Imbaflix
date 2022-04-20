@@ -1,16 +1,30 @@
-@ECHO OFF
+@echo off
+ECHO AUTO COMMIT
 
-SET comment=Saved on %date%-%time%
+:inputCommand
+ECHO Enter commit message or X to exit..
+SET /p input=""
+GOTO check
+  
 
-cd ..
+:check
+IF "%input%" == "" (
+	ECHO Input is empty
+	GOTO inputCommand 
+) ELSE (
+   IF "%input%" == "X" (
+       exit
+   ) ELSE (
+     GOTO commit
+   )
+)
 
-IF "%~1"=="" GOTO COMMIT
-SET username=%1
-SET comment=%comment% by %username%
+:commit
+git.exe add .
+git.exe commit -m "%input%"
+git.exe push
+ECHO Successfully Commited
+ECHO $USERNAME committed "%input%"
 
-:COMMIT
-ECHO %comment%
-git checkout development
-git add .
-git commit -m "%comment%"
-git push origin
+:exit
+PAUSE
