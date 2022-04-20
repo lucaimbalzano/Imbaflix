@@ -31,6 +31,9 @@ git.exe push https://github.com/lucaimbalzano/Imbaflix.git
         >nul ping -n 2 "" 
     )
     echo(:: Done
+    ECHO ############################################
+    ECHO Successfully Commited
+    ECHO %username% committed the message:  "%input%"
     goto :eof
 
 :loadingScreen percent
@@ -53,10 +56,6 @@ git.exe push https://github.com/lucaimbalzano/Imbaflix.git
     ) 
     ECHO ::
     goto :eof
-
-ECHO ############################################
-ECHO Successfully Commited
-ECHO %username% committed the message:  "%input%"
 
 :exit
 PAUSE
