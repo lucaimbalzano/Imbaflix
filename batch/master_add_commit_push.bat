@@ -44,14 +44,14 @@ git.exe push https://github.com/lucaimbalzano/Imbaflix.git
     set "fill=^##################################^"
     set /a "chars=2+%~1/10"
     set "spaces=!fill:~%chars%!"
-    set "loadBar=!fill:~3,%chars%!!spaces:#= !"
+    set "loadBar=!fill:~5,%chars%!!spaces:#= !"
 
     rem Time to paint
     (   cls
         echo(:: computer is computing .... %TIME%
         echo(::
         echo(::     %loadBar%                     
-        echo(::     #Pushing your changes#
+        echo(::     # Pushing your changes #
         echo(::     %loadBar%
     ) 
    
