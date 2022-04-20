@@ -54,7 +54,7 @@ git.exe push https://github.com/lucaimbalzano/Imbaflix.git
         echo(:: computer is computing .... %TIME%
         echo(::
         echo(::                          
-        echo(::     Pushing your changes:  
+        echo(::     Pushing your changes
         echo(::     %loadBar%
         echo(::     %loadBar2%
         echo(::     %loadBar3%
