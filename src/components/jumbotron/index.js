@@ -10,11 +10,23 @@ export default function Jumbotron({ children, direction = 'row', ...restProps })
 }
 
 Jumbotron.Container = function JumbotronContainer({ children, ...restProps }) {
-  return <Container {...restProps}>{children}</Container>;
+  return (
+    <Container {...restProps}>
+      {console.log('START CONTAINER')}
+      {console.log(children)}
+      {children}
+    </Container>
+  );
 };
 
 Jumbotron.Pane = function JumbotronPane({ children, ...restProps }) {
-  return <Pane {...restProps}>{children}</Pane>;
+  return (
+    <Pane {...restProps}>
+      {console.log('START PANE')}
+      {console.log(children)}
+      {children}
+    </Pane>
+  );
 };
 
 Jumbotron.Title = function JumbotronTitle({ children, ...restProps }) {
